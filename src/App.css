@@ -1,38 +1,246 @@
+/* Variables */
+:root {
+  --color1: #79d6de;
+  --color2: #60a9b0;
+  --color3: #faf3f4;
+  --color4: #daebeb;
+  --fontType1: "Rajdhani", sans-serif;
+  --fontBrand: "Monoton", cursive;
+  --shadowStyle: 0px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* App */
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--color3);
+  font-family: var(--fontType1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: min(4vw, 30px);
+}
+/* NavBar */
+.navbar {
+  background: var(--color3);
+}
+.nav-link {
+  font-size: min(2.5vw, 20px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.brandname {
+  font-family: var(--fontBrand);
+}
+
+/* Carousel */
+.carousel-inner {
+  max-height: 500px;
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.carousel-caption {
+  position: relative;
+  top: 25%;
+  left: 0;
+  font-size: 3vw;
+}
+
+.footer {
+  position: position;
+  bottom: 0;
+  width: 100%;
+  font-size: min(2vw, 10px);
+  padding-top: 3vw;
+  min-height: 100px;
+  background-color: var(--color2);
+}
+
+.form-control {
+  background-color: var(--color3);
+}
+
+#form-append-btn {
+  background-color: var(--color3);
+  border: none;
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+}
+
+.boxa {
+  background: var(--color2);
+  opacity: 0.8;
+  color: #222;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadowStyle);
+}
+
+.boxa p {
+  margin: 0;
+  font-size: min(3vw, 15px);
+}
+
+.about-text {
+  font-size: min(2.5vw, 15px);
+  width: 70%;
+  justify-content: center;
+}
+
+.person {
+  display: grid;
+  max-width: 60%;
+  height: auto;
+  background: white;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  background-color: var(--color2);
+  color: black;
+}
+
+.person-detail {
+  padding: 4vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+}
+
+.person-img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  min-height: 5rem;
+  max-height: 5rem;
+  border: 0.25px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  margin-left: 50%;
+  margin-top: 2%;
+}
+
+.person-detail p {
+  font-size: min(10px, 15px);
+}
+
+.recipe-card {
+  width: 170px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.recipe-card img,
+.healthBadges {
+  width: 170px;
+  height: 150px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.recipe-card p {
+  font-size: 10px;
+}
+/* Media queries */
+
+@media (min-width: 650px) {
+  .services {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .brand-container {
+    box-sizing: border-box;
+    padding: 0;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadowStyle);
+  }
+
+  .person {
+    display: flex;
+    background: white;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    margin-left: 2.5rem;
+    min-height: 5rem;
+    max-height: 5rem;
+    max-width: 50%;
+  }
+  .person-img {
+    display: block;
+    padding: 0;
+    margin: 0;
+    min-height: 5rem;
+    max-height: 5rem;
+    border: 0.25px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    transform: translateX(-1.5rem);
+  }
+  .person-detail {
+    padding: 0;
+    padding-right: 1vw;
+    border: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media (min-width: 800px) {
+  .services {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.healthBadges {
+  position: absolute;
+  padding: 5%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.recipe-image:hover .healthBadges {
+  position: absolute;
+  visibility: visible;
+  z-index: 2;
+}
+
+.modal-header {
+  background-color: var(--color2);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-footer button,
+div.btn-info {
+  background-color: var(--color1);
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-footer button:hover,
+div.btn-info:hover {
+  background-color: var(--color3);
+  color: var(--color2);
+}
+
+.footer p {
+  font-size: 15px;
+}
+
+.welcome-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--color3);
 }

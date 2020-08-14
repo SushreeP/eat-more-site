@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project is deployed @ https://eat-more-cafe.netlify.app/
+
 This project is built in a mobile-first approach using
 React, Redux for state management,
 Bootstrap, CSS grid for styling,

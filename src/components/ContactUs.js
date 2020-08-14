@@ -11,12 +11,8 @@ const ContactUs = () => {
               <u>React</u>,<u>Redux</u> for state management,{" "}
               <u>Bootstrap, CSS grid</u> for styling, async/await to fetch data
               from the API and among other utilities <u>Router</u> (of course),{" "}
-              <u>Hooks and Lifecycle components</u>. Oh and the email button
-              works! ;)
+              <u>Hooks and Lifecycle components</u>.
             </p>
-            <h4 className="text-warning">
-              The email button doesn't have functionality yet!
-            </h4>
           </div>
           <div className="col-sm text-light">
             <form>

@@ -20,17 +20,11 @@ const Cart = () => {
         <tr key={nextId()}>
           <td>{item.name}</td>
           <td>
-            <button
-              className="btn btn-circle"
-              onClick={() => dispatch(increment(index))}
-            >
+            <button className="btn" onClick={() => dispatch(increment(index))}>
               +
             </button>
             {item.noplates}
-            <button
-              className="btn btn-circle"
-              onClick={() => dispatch(decrement(index))}
-            >
+            <button className="btn" onClick={() => dispatch(decrement(index))}>
               -
             </button>
           </td>
@@ -49,6 +43,9 @@ const Cart = () => {
           width="50"
         />
       </span>
+      {cart.length === 0 ? null : (
+        <span className="cartlength badge badge-warning">{cart.length}</span>
+      )}
 
       {/* Cart element Modal to view selected cart */}
 

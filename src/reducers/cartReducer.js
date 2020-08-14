@@ -1,5 +1,5 @@
 const initCart = {
-  list: [{ name: "Orange & Avocado Salad", noplates: 2, price: 4.98 }],
+  list: [],
 };
 
 const cartReducer = (state = initCart, action) => {

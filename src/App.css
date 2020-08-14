@@ -264,3 +264,8 @@ div.btn-info:hover {
   background-color: gray;
   color: wheat;
 }
+
+.cartlength {
+  transform: translateX(-10px);
+  z-index: 5;
+}

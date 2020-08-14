@@ -23,7 +23,7 @@ const Carousel = () => {
                   alt="slider 1"
                 />
                 <div className="carousel-caption text-light">
-                  <h1 className="welcome-text">Welcome to Cafe Eat More!</h1>
+                  <p className="welcome-text">Welcome to Cafe Eat More!</p>
                 </div>
               </div>
               <div className="carousel-item">
@@ -33,11 +33,11 @@ const Carousel = () => {
                   alt="slider 2"
                 />
                 <div className="carousel-caption text-info">
-                  <h2>Let us help you ..</h2>
-                  <h3>
+                  <p className="heading">Let us help you ..</p>
+                  <p className="content">
                     Healthy eating should never get boring!
                     <br /> We keep variety. What color bowl do you choose today?
-                  </h3>
+                  </p>
                 </div>
               </div>
               <div className="carousel-item">
@@ -47,12 +47,12 @@ const Carousel = () => {
                   alt="slider 3"
                 />
                 <div className="carousel-caption text-info">
-                  <h2>Good food good life!</h2>
-                  <h3>
+                  <p className="heading">Good food good life!</p>
+                  <p className="content">
                     Don't skip a meal! Just change the meal! Replace processed
                     food with veggies, sugar with honey, one item at a time.
                     Make it a habit than a diet.
-                  </h3>
+                  </p>
                 </div>
               </div>
               <div className="carousel-item">
@@ -62,9 +62,11 @@ const Carousel = () => {
                   alt="slider 2"
                 />
                 <div className="carousel-caption text-success">
-                  <h4>Any meal only at</h4>
+                  <p className="heading">Any meal only at</p>
                   <h2>2.49</h2>
-                  <h5>PLUS unlimited hot beverages, only for our members.</h5>
+                  <p className="content">
+                    PLUS unlimited hot beverages, only for our members.
+                  </p>
                   <span className="animated flash">HURRY UP!!!</span>
                 </div>
               </div>

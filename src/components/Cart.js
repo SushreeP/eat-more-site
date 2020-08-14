@@ -2,12 +2,13 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../actions";
 import nextId from "react-id-generator";
+import AddressPicker from "./AddressPicker";
 
 const Cart = () => {
   const cart = useSelector((state) => state.list);
   const dispatch = useDispatch();
 
-  /*   Displaying empty of selected cart   */
+  /*   Displaying empty or selected cart   */
 
   const displaycart =
     cart.length === 0 ? (
@@ -49,7 +50,7 @@ const Cart = () => {
         />
       </span>
 
-      {/* Cart element Modal */}
+      {/* Cart element Modal to view selected cart */}
 
       <div className="modal" id="cart" tabIndex="-1">
         <div className="modal-dialog modal-dialog-centered">
@@ -66,18 +67,40 @@ const Cart = () => {
               </button>
             </div>
             <div className="modal-body">
-              <table className="justify-content-center">
+              <table className="align-center">
                 <tbody>{displaycart}</tbody>
               </table>
-              {/* Put the cart */}
             </div>
             <div className="modal-footer">
               <p className="badge-warning">
                 Sorry, we only accept CASH at the moment!
               </p>
-              <button type="button" className="btn btn-primary">
-                Place Order
+              <button
+                type="button"
+                className="btn btn-info"
+                data-toggle="modal"
+                data-target="#address-modal"
+                data-dismiss="modal"
+              >
+                Check out
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Next Modal to enter address */}
+
+      <div className="modal" id="address-modal" tabIndex="-1">
+        <AddressPicker />
+      </div>
+
+      {/* Success */}
+      <div className="modal" id="success-modal" tabIndex="-1">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body justify-content-center">
+              Order placed!
             </div>
           </div>
         </div>

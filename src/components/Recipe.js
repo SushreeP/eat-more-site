@@ -15,8 +15,8 @@ const Recipe = ({ title, calories, image, healthLabels, ingredients, url }) => {
     <div>
       <div className="recipe-card mr-sm-1 mr-lg-3 mb-1">
         <div className="recipe-image">
-          <div className="healthBadges">
-            <div>
+          <div className="healthBadges overflow-hidden">
+            <div className="h-100 w-100 p-2 overflow-hidden">
               <span>{healthBadges}</span>
             </div>
           </div>
